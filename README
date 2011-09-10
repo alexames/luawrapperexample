@@ -6,17 +6,17 @@ This repository is a very simple example of how you can use LuaWrapper to
 create typesafe bindings between Lua and C++. This is not a complete tutorial,
 but rather just a quick project to illustrate how the library is used.
 Specifically, it does not cover the hold, release or clean functions. The
-source files are not well documented at this time, but should be simple enought
+source files are not well documented at this time, but should be simple enough
 to follow without much trouble. More advanced examples may be put up in the
 future.
 
-If you are on a Linux system (or one of the various flavors of Unit) you should
-be able to use the makefile supplied (you may need to adjust the path to the
-Lua include directory). If you are Windows, you'll probably need to make a
-Visual Studio solution and add the files to it. This is left as an exercise to
-the reader.
+If you are using Linux (or one of the various flavors of Unix) you should be
+able to use the makefile supplied (you may need to adjust the path to the Lua
+include directory). If you are Windows, you will probably need to make a Visual
+Studio solution and add the files to it. This is left as an exercise to the
+reader.
 
-To run the example once it's build, type 
+To run the example once it's built, type 
 
     ./example example.lua
 
