@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string>
 
-#include "luawrapper.hpp"
+extern "C"
+{
 #include "lua.h"
 #include "lauxlib.h"
+}
+#include "luawrapper.hpp"
 
 #include "BankAccount.hpp"
 
@@ -38,7 +41,7 @@ int BankAccount_checkTotalMoneyInBank(lua_State *L)
 //
 // Member Functions
 //
-// These functions are stored on the BankAccount.metatable table. 
+// These functions are stored on the BankAccount.metatable table.
 // All BankAccount objects in Lua have access to the functions defined there
 // by the use of special a __index metatmethod that is set up by LuaWrapper.
 //
@@ -81,7 +84,7 @@ static luaL_Reg BankAccount_table[] =
 
 static luaL_Reg BankAccount_metatable[] =
 {
-    { "getOwnerName", BankAccount_getOwnerName }, 
+    { "getOwnerName", BankAccount_getOwnerName },
     { "deposit", BankAccount_deposit },
     { "withdraw", BankAccount_withdraw },
     { "checkBalance", BankAccount_checkBalance },
@@ -90,12 +93,12 @@ static luaL_Reg BankAccount_metatable[] =
 
 int luaopen_BankAccount(lua_State* L)
 {
-    luaW_register<BankAccount>(L, 
+    luaW_register<BankAccount>(L,
         "BankAccount",
         BankAccount_table,
         BankAccount_metatable,
-        BankAccount_new // If your class has a default constructor you can omit this argument, 
-                        // LuaWrapper will generate a default allocator for you. 
+        BankAccount_new // If your class has a default constructor you can omit this argument,
+                        // LuaWrapper will generate a default allocator for you.
     );
     return 1;
 }

@@ -1,7 +1,10 @@
 #include <iostream>
 #include <string>
 
+extern "C"
+{
 #include "lua.h"
+}
 #include "luawrapper.hpp"
 #include "luawrapperutil.hpp"
 
@@ -27,7 +30,7 @@ static int Example_PrintMe(lua_State* L)
 
 static luaL_reg Example_metatable[] =
 {
-    // This function is 
+    // This function is
     { "PrintMe", Example_PrintMe },
 
     // In many cases, all you need are simple getter or setter functions This
@@ -81,7 +84,7 @@ static luaL_reg Example_metatable[] =
     // function wrappers.
 
     // Normally it would be silly to have getter and setter functions for both
-    // the member variable AND the getter/setter function, I've included both 
+    // the member variable AND the getter/setter function, I've included both
     // here as an example of how it works
 
     // Example of member access through getters and setters
@@ -116,13 +119,13 @@ static luaL_reg Example_metatable[] =
     { "SetPtrFunc", luaU_set<Example, Example, &Example::SetPtr> },
     { "PtrFunc", luaU_getset<Example, Example, &Example::GetPtr, &Example::SetPtr> },
 
-    // In order to use luaU_get and luaU_set on non-primitive types, you must define luaU_to 
-    // and luaU_check for that type. 
+    // In order to use luaU_get and luaU_set on non-primitive types, you must define luaU_to
+    // and luaU_check for that type.
     // See LuaCustomTypes.hpp for an example involving std::string and Vector2D
     { "GetCPPStringFunc", luaU_get<Example, std::string, &Example::GetCPPString> },
     { "SetCPPStringFunc", luaU_set<Example, std::string, &Example::SetCPPString> },
     { "CPPStringFunc", luaU_getset<Example, std::string, &Example::GetCPPString, &Example::SetCPPString> },
-    
+
     { "GetVecFunc", luaU_get<Example, Vector2D, &Example::GetVec> },
     { "SetSetFunc", luaU_set<Example, Vector2D, &Example::SetVec> },
     { "VecFunc", luaU_getset<Example, Vector2D, &Example::GetVec, &Example::SetVec> },
