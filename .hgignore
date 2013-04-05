@@ -5,5 +5,7 @@ syntax: glob
 *.opensdf
 *.user
 *.ilk
+*.exe
+*.pdb
 
 */Debug/*

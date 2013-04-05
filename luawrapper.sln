@@ -51,14 +51,14 @@ Global
 		{5A907701-F045-4114-92E9-284FEC028024}.Debug C|Win32.Build.0 = Debug C|Win32
 		{5A907701-F045-4114-92E9-284FEC028024}.Debug C++|Win32.ActiveCfg = Debug C++|Win32
 		{5A907701-F045-4114-92E9-284FEC028024}.Debug C++|Win32.Build.0 = Debug C++|Win32
-		{5A907701-F045-4114-92E9-284FEC028024}.Debug|Win32.ActiveCfg = Debug C++|Win32
-		{5A907701-F045-4114-92E9-284FEC028024}.Debug|Win32.Build.0 = Debug C++|Win32
+		{5A907701-F045-4114-92E9-284FEC028024}.Debug|Win32.ActiveCfg = Debug C|Win32
+		{5A907701-F045-4114-92E9-284FEC028024}.Debug|Win32.Build.0 = Debug C|Win32
 		{5A907701-F045-4114-92E9-284FEC028024}.Release C|Win32.ActiveCfg = Release C|Win32
 		{5A907701-F045-4114-92E9-284FEC028024}.Release C|Win32.Build.0 = Release C|Win32
 		{5A907701-F045-4114-92E9-284FEC028024}.Release C++|Win32.ActiveCfg = Release C++|Win32
 		{5A907701-F045-4114-92E9-284FEC028024}.Release C++|Win32.Build.0 = Release C++|Win32
-		{5A907701-F045-4114-92E9-284FEC028024}.Release|Win32.ActiveCfg = Release C++|Win32
-		{5A907701-F045-4114-92E9-284FEC028024}.Release|Win32.Build.0 = Release C++|Win32
+		{5A907701-F045-4114-92E9-284FEC028024}.Release|Win32.ActiveCfg = Release C|Win32
+		{5A907701-F045-4114-92E9-284FEC028024}.Release|Win32.Build.0 = Release C|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
