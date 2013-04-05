@@ -1,0 +1,9 @@
+syntax: glob
+*.orig
+*.sdf
+*.suo
+*.opensdf
+*.user
+*.ilk
+
+*/Debug/*
