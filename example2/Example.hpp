@@ -39,6 +39,11 @@ public:
     void SetFloatNumber(float val);
     void SetPtr(Example* val);
     void SetVec(const Vector2D& Member);
+
+    int DoSomething(bool b);
+
+    int DoSomethingElse(int i, int j);
+    int DoSomethingElse(float f);
 };
 
 #endif // EXAMPLE_HPP_

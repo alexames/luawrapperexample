@@ -1,5 +1,6 @@
 #include "Example.hpp"
 #include <string>
+#include <iostream>
 
 // These are just a bunch of generic getters and setters for
 // values in the Example class
@@ -95,4 +96,23 @@ void Example::SetPtr(Example* val)
 {
     ptr = val;
 }
+
+int Example::DoSomething(bool b)
+{
+    cout << "b = " << b << endl;
+    return 0;
+}
+
+int Example::DoSomethingElse(int i, int j)
+{
+    cout << "i = " << i << ", j = " << j << endl;
+    return 0;
+}
+
+int Example::DoSomethingElse(float f)
+{
+    cout << "f = " << f << endl;
+    return 0;
+}
+
 
