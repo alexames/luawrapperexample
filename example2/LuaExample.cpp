@@ -129,11 +129,15 @@ static luaL_reg Example_metatable[] =
     { "GetVecFunc", luaU_get<Example, Vector2D, &Example::GetVec> },
     { "SetSetFunc", luaU_set<Example, Vector2D, &Example::SetVec> },
     { "VecFunc", luaU_getset<Example, Vector2D, &Example::GetVec, &Example::SetVec> },
+    
+#if !defined(_WIN32) && !defined(LUAW_NO_CXX11)
 
     { "DoSomething", luaU_func(&Example::DoSomething) },
 
     { "DoSomethingElse1", luaU_funcsig(int, Example, DoSomethingElse, int, int) },
     { "DoSomethingElse2", luaU_funcsig(int, Example, DoSomethingElse, float) },
+
+#endif
 
     { NULL, NULL }
 };
